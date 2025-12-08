@@ -115,39 +115,89 @@ const Home = ({ setUser }) => {
                 </button>
             </div>
 
-            <section className="py-5 bg-light" id="register">
-                <div className="container">
-                    <h2 className="text-center mb-4 fw-bold">Join UrbanBite</h2>
-                    <div className="row justify-content-center">
-                        <div className="col-md-8">
-                            <div className="card shadow border-0 p-4">
-                                <form onSubmit={handleSubmit} className="row g-3">
-                                    <div className="col-md-6">
-                                        <input type="text" className="form-control" name="name" placeholder="Full Name" value={formData.name} onChange={handleChange} />
-                                    </div>
-                                    <div className="col-md-6">
-                                        <input type="email" className="form-control" name="email" placeholder="Email" value={formData.email} onChange={handleChange} />
-                                    </div>
-                                    <div className="col-md-6">
-                                        <input type="text" className="form-control" name="phone" placeholder="Phone Number" value={formData.phone} onChange={handleChange} />
-                                    </div>
-                                    <div className="col-md-6">
-                                        <select className="form-select" name="plan" value={formData.plan} onChange={handleChange}>
-                                            <option value="">Select Plan</option>
-                                            <option value="Daily">Daily</option>
-                                            <option value="Weekly">Weekly</option>
-                                            <option value="Monthly">Monthly</option>
-                                        </select>
-                                    </div>
-                                    <div className="col-12 text-center mt-4">
-                                        <button type="submit" className="btn btn-success px-5 btn-lg">Register Now</button>
-                                    </div>
-                                </form>
-                            </div>
+           <section className="py-5 bg-light" id="register">
+    <div className="container">
+        <h2 className="text-center mb-4 fw-bold">Join UrbanBite</h2>
+        <div className="row justify-content-center">
+            <div className="col-md-8">
+                <div className="card shadow border-0 p-4">
+                    <form onSubmit={handleSubmit} className="row g-3">
+
+                        <div className="col-md-6">
+                            <input 
+                                type="text" 
+                                className="form-control" 
+                                name="name" 
+                                placeholder="Full Name" 
+                                value={formData.name} 
+                                onChange={handleChange} 
+                            />
                         </div>
-                    </div>
+
+                        <div className="col-md-6">
+                            <input 
+                                type="email" 
+                                className="form-control" 
+                                name="email" 
+                                placeholder="Email" 
+                                value={formData.email} 
+                                onChange={handleChange} 
+                            />
+                        </div>
+
+                        <div className="col-md-6">
+                            <input 
+                                type="text" 
+                                className="form-control" 
+                                name="phone" 
+                                placeholder="Phone Number" 
+                                value={formData.phone} 
+                                onChange={handleChange} 
+                            />
+                        </div>
+
+                        <div className="col-md-6">
+                            <select 
+                                className="form-select" 
+                                name="plan" 
+                                value={formData.plan} 
+                                onChange={handleChange}
+                            >
+                                <option value="">Select Plan</option>
+                                <option value="Daily">Daily</option>
+                                <option value="Weekly">Weekly</option>
+                                <option value="Monthly">Monthly</option>
+                            </select>
+                        </div>
+
+                        {/* Veg / Non-Veg Option */}
+                        <div className="col-md-6">
+                            <select 
+                                className="form-select" 
+                                name="foodType" 
+                                value={formData.foodType} 
+                                onChange={handleChange}
+                            >
+                                <option value="">Food Preference</option>
+                                <option value="Veg">Veg</option>
+                                <option value="Non-Veg">Non-Veg</option>
+                                <option value="Both">Both</option>
+                            </select>
+                        </div>
+
+                        <div className="col-12 text-center mt-4">
+                            <button type="submit" className="btn btn-success px-5 btn-lg">
+                                Register Now
+                            </button>
+                        </div>
+
+                    </form>
                 </div>
-            </section>
+            </div>
+        </div>
+    </div>
+</section>
+
 
             <div className="modal fade" id="successModal" tabIndex="-1">
                 <div className="modal-dialog modal-dialog-centered">
