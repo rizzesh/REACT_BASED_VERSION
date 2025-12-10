@@ -40,7 +40,7 @@ function App() {
 
           <Route path="/menu" element={<Menu />} />
 
-          <Route path="/dashboard" element={<Dashboard user={user} />} />
+          <Route path="/dashboard" element={<Dashboard user={user} setUser={setUser} />} />
 
           <Route path="/checkout" element={<Checkout user={user} />} />
 
